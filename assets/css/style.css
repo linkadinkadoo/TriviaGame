@@ -1,60 +1,64 @@
+@font-face{
+    font-family: Hollywood;
+    src: url(SF_Hollywood_Hills.ttf);
+  }
+
+body {
+    color: #E6E7E9;
+    font-family: Hollywood, Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    margin: 0;
+    line-height: 40px;
+}
 .wrapper {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: 200px auto auto;
     grid-auto-columns: auto;
-    grid-gap: 1em;
-    grid-template-areas:"title title title"
-                        "guesses zoltar wins"
-                        "bottomLeft bottom bottomRight"
-                        "lowerLeft lower lowerRight"
-                        "footyLeft footy footyRight";
+    grid-gap: .5em;
+    background-image: url("../images/Hollywood-Backdrop.jpg");
+    background-repeat:no-repeat;
+    background-size:100% 100%;
   }
-
-.box1 { 
+.title { 
     grid-column-start: 1; 
     grid-column-end: 4; 
     grid-row-start: 1; 
     grid-row-end: 2; 
-    background: black;
     justify-self: center;
-    align-self: center;
+    align-self: start;
+    padding: 30px;
+    filter: blur(.5px);
   }
-
-.box2{
+.left{
     grid-column-start: 1; 
     grid-column-end: 2; 
     grid-row-start: 2; 
     grid-row-end: 3; 
-    background: black;
     align-self: center;
 }
-
-.box3{
+.middle{
     grid-column-start: 2; 
     grid-column-end: 3; 
     grid-row-start: 2; 
     grid-row-end: 3; 
     background: black;
-    align-self: center;
+    align-self: start;
     justify-self: center;
     z-index: 1;
+    width: 400px;
+    height: 300px;
+    padding: 25px;
 }
-img{
-    max-height: 300px;
-}
-
-.box4{
+.right{
     grid-column-start: 3; 
     grid-column-end: 4; 
     grid-row-start: 2; 
     grid-row-end: 3; 
-    background: black;
     align-self: center;
     justify-self: center;
 }
-
-.box5{
+.bottom{
     grid-column-start: 1; 
     grid-column-end: 4; 
     grid-row-start: 3; 
@@ -62,16 +66,7 @@ img{
     background: black;
     justify-self: center;
     align-self: center;
-}
-
-body {
-    color: yellow;
-    font-family: 'Aladin', cursive;
-    font-size: 24px;
-    margin: 0;
-    line-height: 40px;
-    background: black;
-
+    height: 100px;
 }
 h1{
     font-size: 100px;
@@ -79,77 +74,7 @@ h1{
 }
 h7{
     text-align: center;
-
 }
 p{
     text-align: center;
 }
-
-#game1{
-    text-align: center;
-}
-
-@media screen and (max-width: 640px) {
-
-    .wrapper {
-        display: grid;
-        grid-template-columns: 1fr 2fr 1fr;
-        grid-template-rows: auto auto auto;
-        grid-auto-columns: auto;
-        grid-gap: 1em;
-        grid-template-areas:"title title title"
-                            "guesses zoltar wins"
-                            "midLeft mid midRight"
-                            "lowerLeft lower lowerRight"
-                            "footyLeft footy footyRight";
-      }
-
-    .box3 {
-        grid-area: title;
-    }
-    .box1{
-        grid-area: zoltar;
-    }
-    .box5{
-        grid-area: mid;
-    }
-    .box2{
-        grid-area: lower;
-    }
-    .box4{
-        grid-area: lowerRight;
-    }
-
-    img{
-        max-height: 600px;
-    }
-    h1{
-        font-size: 60px;
-        text-align: center;
-    }
-}    
-@media screen and (min-width: 1024px) {
-        
-    .wrapper {
-        display: grid;
-        grid-template-columns: 1fr 2fr 1fr;
-        grid-template-rows: 200px auto auto;
-        grid-auto-columns: auto;
-        grid-gap: 1em;
-        grid-template-areas:"title title title"
-                            "guesses zoltar wins"
-                            "bottomLeft bottom bottomRight"
-                            "lowerLeft lower lowerRight"
-                            "footyLeft footy footyRight";
-      }
-      .box2{
-        justify-self: end;
-      }
-      .box4{
-          justify-self: start;
-      }
-      img{
-        max-height: 400px;
-        }
-}
- 
