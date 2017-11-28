@@ -16,26 +16,40 @@
   <div class="wrapper">
       <div class="title"><h1>Trivia</h1></div>
       <div class="left"></div>
-      <div class="middle">
+
+      <div class="middle" id="startScreen">
             <!-- this div is the start screen -->
-            <button id="start" class="button start">Start</button>
-          <!-- this div holds the main trivia screen -->
-            <div id = "gameHolder">
-                <div>Time Remaining: <span id="timer">30</span> seconds</div>
-                <div id="q">First Question:</div>
-                <button id="a" class="button">A</button>
-                <button id="b" class="button">B</button>
-                <button id="c" class="button">C</button>
-                <button id="d" class="button">D</button>
-            </div>  
-            <!-- this div reveals whether or not the user was correct -->
-            <div id="reveal">Wrong or Right?</div>
-            <!-- this div is the end screen -->
-            <div id="finalResult"></div>
-            <div>Right Answers: <span id="wins"></span></div>
-            <!-- this div is the end screen -->
-            <div>Wrong Answers: <span id="losses"></span></div>
+            <div id="instructions">Do you like obscure, difficult Hollywood trivia? Well then, you came to the right place! You have 30 seconds to answer each question. Click the button below to get started!</div>
+            <br>
+            <button id="start" class="button start">Start!</button>
       </div>
+
+      <div class="middle" id = "gameScreen">
+      <!-- this div holds the main trivia screen -->
+        <div id = "gameHolder">
+            <div id=timeRemaining>Time Remaining: <span id="timer">30</span> seconds</div>
+            <div id="q">First Question:</div>
+            <button id="a" class="button">A</button>
+            <button id="b" class="button">B</button>
+            <button id="c" class="button">C</button>
+            <button id="d" class="button">D</button>
+        </div>  
+      </div>
+
+      <div class="middle" id = "revealScreen">
+        <!-- this div is the answer -->
+        <div id="answer"></div>
+        <div id = "info"></div>
+      </div>
+
+      <div class="middle" id = "resultsScreen">
+        <!-- this div is the end screen -->
+        <div id="finalResult"></div>
+        <div>Right Answers: <span id="wins"></span></div>
+        <!-- this div is the end screen -->
+        <div>Wrong Answers: <span id="losses"></span></div>
+      </div>
+
       <div class="right"></div>
       <div class="bottom"></div>
   </div>

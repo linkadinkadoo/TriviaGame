@@ -42,11 +42,11 @@ body {
     grid-column-end: 3; 
     grid-row-start: 2; 
     grid-row-end: 3; 
-    background: black;
+    background: #0E0D15;
     align-self: start;
     justify-self: center;
     z-index: 1;
-    width: 400px;
+    width: 450px;
     height: 300px;
     padding: 25px;
 }
@@ -89,10 +89,52 @@ p{
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
     border-radius: 12px;
-    -webkit-transition-duration: 0.3s; /* Safari */
-    transition-duration: 0.3s;
+    -webkit-transition-duration: 0.2s; /* Safari */
+    transition-duration: 0.2s;
+    justify-self: center;
+    align-self: center;
+    width: 450px;
+}
+.start{
+    background-color: green;
+    border: none;
+    color: #E6E7E9;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 12px;
+    -webkit-transition-duration: 0.1s; /* Safari */
+    transition-duration: 0.1s;
+    justify-self: center;
+    align-self: center;
+    width: 100px;
 }
 .button:hover {
-    background-color: #4B4F75;
+    background-color: rgb(255, 61, 61);
     color: white;
+}
+#startScreen{
+    z-index: 3;
+    visibility: visible;
+    
+}
+#gameScreen{
+    z-index: 2;
+    visibility: hidden;
+}
+#revealScreen{
+    z-index: 1;
+    visibility: hidden;
+}
+#resultsScreen{
+    z-index: 1;
+    visibility: hidden;
+}
+#timeRemaining{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: yellow;
 }
