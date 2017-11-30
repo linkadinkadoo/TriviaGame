@@ -46,8 +46,8 @@ body {
     align-self: start;
     justify-self: center;
     z-index: 1;
-    width: 450px;
-    height: 300px;
+    width: 500px;
+    height: 400px;
     padding: 25px;
 }
 .right{
@@ -82,7 +82,7 @@ p{
     background-color: #A7161B;
     border: none;
     color: #E6E7E9;
-    padding: 10px 20px;
+    padding: 5px 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -112,6 +112,9 @@ p{
     align-self: center;
     width: 100px;
 }
+.start.button:hover {
+    background-color: lightgreen;
+}
 .button:hover {
     background-color: rgb(255, 61, 61);
     color: white;
@@ -136,5 +139,8 @@ p{
 #timeRemaining{
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
+    color: yellow;
+}
+#answer{
     color: yellow;
 }
